@@ -1,1 +1,2 @@
-*.zip
+# release zips are committed for one-click download
+!youtube-stat-eliminator-*.zip
