@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="" width="28" height="28">
+    <div>
+      <h1>YouTube Stat Eliminator</h1>
+      <p>Watch without the numbers</p>
+    </div>
+  </header>
+
+  <main>
+    <label class="row">
+      <span class="text">
+        <span class="label">View counts</span>
+        <span class="hint">Homepage, search, watch pages</span>
+      </span>
+      <span class="switch"><input type="checkbox" id="views" checked><span class="track"></span></span>
+    </label>
+
+    <label class="row">
+      <span class="text">
+        <span class="label">Like counts</span>
+        <span class="hint">Watch page and Shorts</span>
+      </span>
+      <span class="switch"><input type="checkbox" id="likes" checked><span class="track"></span></span>
+    </label>
+
+    <label class="row">
+      <span class="text">
+        <span class="label">Subscriber counts</span>
+        <span class="hint">Channels and video pages</span>
+      </span>
+      <span class="switch"><input type="checkbox" id="subs" checked><span class="track"></span></span>
+    </label>
+
+    <label class="row">
+      <span class="text">
+        <span class="label">Comment counts</span>
+        <span class="hint">Headers and comment likes</span>
+      </span>
+      <span class="switch"><input type="checkbox" id="comments" checked><span class="track"></span></span>
+    </label>
+  </main>
+
+  <footer>
+    <span id="status">All stats hidden</span>
+    <a href="https://github.com/ctrimm/youtube-stat-eliminator" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+<script src="popup.js"></script>
+</body>
+</html>

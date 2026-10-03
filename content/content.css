@@ -1,0 +1,51 @@
+/* YouTube Stat Eliminator — structural hiding rules.
+ *
+ * Toggling per-category classes on <html> (done by content.js) drives these
+ * rules. Elements that share a container with non-stat text (e.g. "28M" next
+ * to "6y ago" inside #metadata-line) are matched by text pattern in
+ * content.js, which applies [data-yse-hide] attributes.
+ *
+ * Selectors below target elements that are unambiguously stats, verified
+ * against the live YouTube DOM (Oct 2026).
+ */
+
+[data-yse-hide] {
+  display: none !important;
+}
+
+/* ---------- Subscriber counts ---------- */
+html.yse-hide-subs #owner-sub-count,
+html.yse-hide-subs #subscriber-count,
+html.yse-hide-subs [id="subscriber-count"] {
+  display: none !important;
+}
+
+/* ---------- Like counts ---------- */
+/* Current view-model buttons (watch page, Shorts, search) + legacy renderers */
+html.yse-hide-likes like-button-view-model .ytSpecButtonShapeNextButtonTextContent,
+html.yse-hide-likes ytd-segmented-like-dislike-button-view-model #text,
+html.yse-hide-likes ytd-like-button-renderer #text {
+  display: none !important;
+}
+
+/* ---------- Comment counts ---------- */
+/* "N Comments" header above the comment section */
+html.yse-hide-comments ytd-comments-header-renderer #count {
+  display: none !important;
+}
+/* Per-comment like counts */
+html.yse-hide-comments ytd-comment-action-buttons-renderer #vote-count-middle {
+  display: none !important;
+}
+
+/* ---------- View counts (structural) ---------- */
+/* Watch page info line ("1.8B views" next to the date) */
+html.yse-hide-views ytd-watch-info-text #view-count,
+/* Legacy primary-info renderer, still served to some clients */
+html.yse-hide-views ytd-video-view-count-renderer .view-count {
+  display: none !important;
+}
+/* Player hover overlay subtitle ("Channel — 1.8B views — 16y ago") */
+html.yse-hide-views yt-player-overlay-video-details-renderer .ytPlayerOverlayVideoDetailsRendererSubtitle {
+  display: none !important;
+}
