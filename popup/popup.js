@@ -5,12 +5,9 @@
 (() => {
   'use strict';
 
-  const DEFAULTS = { views: true, likes: true, subs: true, comments: true };
-  const LABELS = {
-    views: 'view counts',
-    likes: 'like counts',
-    subs: 'subscriber counts',
-    comments: 'comment counts',
+  const DEFAULTS = {
+    views: true, likes: true, subs: true, comments: true,
+    shorts: false, upnext: false, homefeed: false, commentsSection: false,
   };
 
   const boxes = {};
@@ -20,15 +17,16 @@
   const status = document.getElementById('status');
 
   function renderStatus(values) {
-    const hidden = Object.keys(DEFAULTS).filter((k) => values[k]);
-    if (hidden.length === Object.keys(DEFAULTS).length) {
-      status.textContent = 'All stats hidden';
+    const keys = Object.keys(DEFAULTS);
+    const hidden = keys.filter((k) => values[k]);
+    if (hidden.length === keys.length) {
+      status.textContent = 'Everything hidden';
       status.classList.remove('hidden-none');
     } else if (hidden.length === 0) {
       status.textContent = 'Nothing hidden';
       status.classList.add('hidden-none');
     } else {
-      status.textContent = `Hiding: ${hidden.map((k) => LABELS[k]).join(', ')}`;
+      status.textContent = `Hiding ${hidden.length} of ${keys.length}`;
       status.classList.remove('hidden-none');
     }
   }

@@ -2,7 +2,8 @@
 
 A Chrome extension (Manifest V3) that hides view counts, like counts, subscriber
 counts, and comment counts across YouTube — so you can watch videos without
-the numbers shaping what you click.
+the numbers shaping what you click. It can also declutter the page: Shorts,
+Up Next recommendations, the home feed, and the comments section.
 
 ## What it hides
 
@@ -13,9 +14,19 @@ the numbers shaping what you click.
 | Subscriber counts | Video pages, channel pages, search results |
 | Comment counts | Comment section header, per-comment like counts |
 
-Each category can be toggled independently from the toolbar popup. Buttons stay
-functional — only the numbers disappear. Settings sync across your Chrome
-profile via `chrome.storage.sync`.
+## Declutter (opt-in)
+
+| Toggle | Effect |
+|---|---|
+| Shorts | Hides Shorts shelves, rows, lockups, and nav entries everywhere |
+| Up Next | Hides the recommendations column on watch pages |
+| Home feed | Hides the homepage video grid (shows a "search for something" hint) |
+| Comments section | Hides the entire comments area on watch pages |
+
+Each toggle works independently from the toolbar popup, and changes apply
+instantly to open tabs. Buttons stay functional — only the numbers (and the
+clutter) go away. Settings sync across your Chrome profile via
+`chrome.storage.sync`.
 
 ## Install (load unpacked)
 

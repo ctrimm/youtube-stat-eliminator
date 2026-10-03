@@ -13,13 +13,22 @@
 (() => {
   'use strict';
 
-  const DEFAULTS = { views: true, likes: true, subs: true, comments: true };
+  const DEFAULTS = {
+    // Stat hiding (on by default: the extension's original purpose)
+    views: true, likes: true, subs: true, comments: true,
+    // Declutter (opt-in: each hides a whole section of the page)
+    shorts: false, upnext: false, homefeed: false, commentsSection: false,
+  };
 
   const CLASSES = {
     views: 'yse-hide-views',
     likes: 'yse-hide-likes',
     subs: 'yse-hide-subs',
     comments: 'yse-hide-comments',
+    shorts: 'yse-no-shorts',
+    upnext: 'yse-no-upnext',
+    homefeed: 'yse-no-homefeed',
+    commentsSection: 'yse-no-comments-section',
   };
 
   // Full-string matches only (English YouTube UI), so a video titled

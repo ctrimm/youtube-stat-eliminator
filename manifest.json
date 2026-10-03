@@ -1,1 +1,41 @@
-{"action":{"default_icon":{"128":"icons/icon128.png","16":"icons/icon16.png","48":"icons/icon48.png"},"default_popup":"popup/popup.html","default_title":"YouTube Stat Eliminator"},"author":"Cory Trimm","content_scripts":[{"css":["content/content.css"],"js":["content/content.js"],"matches":["*://*.youtube.com/*","*://*.youtu.be/*"],"run_at":"document_start"}],"description":"Hide view counts, like counts, subscriber counts, and comment counts across YouTube. Watch videos without the numbers.","homepage_url":"https://github.com/ctrimm/youtube-stat-eliminator","icons":{"128":"icons/icon128.png","16":"icons/icon16.png","48":"icons/icon48.png"},"manifest_version":3,"minimum_chrome_version":"88","name":"YouTube Stat Eliminator","permissions":["storage"],"version":"1.0.0"}
+{
+  "action": {
+    "default_icon": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_popup": "popup/popup.html",
+    "default_title": "YouTube Stat Eliminator"
+  },
+  "author": "Cory Trimm",
+  "content_scripts": [
+    {
+      "css": [
+        "content/content.css"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtu.be/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Hide YouTube stats (views, likes, subs, comments) and declutter your feed: Shorts, Up Next, home feed, comments section.",
+  "homepage_url": "https://github.com/ctrimm/youtube-stat-eliminator",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 3,
+  "minimum_chrome_version": "88",
+  "name": "YouTube Stat Eliminator",
+  "permissions": [
+    "storage"
+  ],
+  "version": "1.1.0"
+}

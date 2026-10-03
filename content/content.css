@@ -49,3 +49,44 @@ html.yse-hide-views ytd-video-view-count-renderer .view-count {
 html.yse-hide-views yt-player-overlay-video-details-renderer .ytPlayerOverlayVideoDetailsRendererSubtitle {
   display: none !important;
 }
+
+/* ================= Declutter ================= */
+
+/* --- Shorts: shelves, rows, lockups, nav entries --- */
+html.yse-no-shorts ytd-rich-shelf-renderer[is-shorts],
+html.yse-no-shorts ytd-reel-shelf-renderer,
+html.yse-no-shorts ytd-rich-item-renderer:has(ytm-shorts-lockup-view-model),
+html.yse-no-shorts ytm-shorts-lockup-view-model,
+html.yse-no-shorts ytd-reel-item-renderer,
+html.yse-no-shorts ytd-video-renderer:has(a[href^="/shorts/"]),
+html.yse-no-shorts ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+html.yse-no-shorts ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+html.yse-no-shorts ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html.yse-no-shorts ytd-mini-guide-entry-renderer:has(a[aria-label="Shorts"]) {
+  display: none !important;
+}
+
+/* --- Up Next: the recommendations column on watch pages --- */
+html.yse-no-upnext ytd-watch-flexy ytd-watch-next-secondary-results-renderer,
+html.yse-no-upnext ytd-watch-flexy #secondary {
+  display: none !important;
+}
+
+/* --- Home feed: the homepage video grid --- */
+html.yse-no-homefeed ytd-browse[page-subtype="home"] ytd-rich-grid-renderer {
+  display: none !important;
+}
+/* Friendly placeholder so a hidden feed doesn't look like a broken page */
+html.yse-no-homefeed ytd-browse[page-subtype="home"] div#primary::after {
+  content: "Home feed hidden — search for something to watch.";
+  display: block;
+  padding: 72px 24px;
+  text-align: center;
+  color: var(--yt-spec-text-secondary, #606060);
+  font-size: 15px;
+}
+
+/* --- Comments section: the entire comments area on watch pages --- */
+html.yse-no-comments-section ytd-watch-flexy #comments {
+  display: none !important;
+}
