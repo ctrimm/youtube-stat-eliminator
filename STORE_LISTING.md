@@ -45,6 +45,9 @@ English
 4. `4-popup.png` — the settings popup (v1.1: stats + declutter sections)
 5. `5-home-decluttered.png` — homepage with the feed hidden
 
+## Promotional tile (required, 440x280)
+`store-assets/promo-tile-440x280.png`
+
 ## Icon
 `icons/icon128.png` (16/48/128 included in the package)
 
